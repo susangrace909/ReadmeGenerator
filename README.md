@@ -23,7 +23,7 @@
 ## Repository Link
 
 - Repository can be found at:
-  [GitHub](https://github.com/susangrace909/Susan-Pero-Portfolio.git)
+  [GitHub](https://github.com/susangrace909/ReadmeGenerator.git)
 
 ## Video of Usage:
 
