@@ -3,17 +3,9 @@ var fs = require("fs");
 // var staticSite = require("static-site");
 var inquirer = require("inquirer");
 const { setFlagsFromString } = require("v8");
-const generateMarkdown = require("./utils/generateMarkdown");
+const generateMarkdown = require(".generateMarkdown");
 
-// QUESTIONS
-// type:
-//{name: 
-//message: 
-//validate: 
-//if () {return true;}
-//else { console.log("what words pop up here");
-//return false;}
-//}
+///// QUESTIONS/////
 
 const questions = [
 //Title
@@ -121,19 +113,20 @@ const questions = [
 }
 
 //License
-//{
-//    type: "checkbox",
-//    name: "licensure",
-//    message: "Do you have any licenses for this project?",
-//    validate: (licensureCheckbox) => {
-//        if (licensureCheckbox) {
-//            return true;
-//        } else {
-//            console.log("Please check yes or no.");
-//            return false;
-//        }
-//    }
-//}
+{
+    type: "checkbox",
+    name: "licensure",
+    message: "Which licenses do you have for this project?",
+    choices: ["Academic", "Apache", "Artistic", "Boost", "BSD", "Creative Commons", "Do What the F*ck You Want To", "Educational Community", "Eclipse", "EU", "GNU", "ISC", "LaTeX", "Microsoft", "MIT" ,"Mozilla", "Open Software", "PostgreSQL", "SIL", "University of Illinois", "Unlicense", "zLib License", "None"],
+    validate: (licensureCheckbox) => {
+        if (licensureCheckbox) {
+            return true;
+        } else {
+            console.log("Please check one.");
+            return false;
+        }
+    }
+}
 
 //Features
 {
