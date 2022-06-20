@@ -8,207 +8,230 @@ const generateMarkdown = require("./generateMarkdown");
 ///// QUESTIONS/////
 
 const questions = [
-//Title
-    {
+  //Title
+  {
     type: "input",
     name: "title",
     message: "What is the title of your project?",
     validate: (titleInput) => {
-        if (titleInput) {
-            return true;
-        } else {
-            console.log("Title Required!");
-            return false;
-        }
-    }
-}
+      if (titleInput) {
+        return true;
+      } else {
+        console.log("Title Required!");
+        return false;
+      }
+    },
+  },
 
-//Description
-{
+  //Description
+  {
     type: "input",
     name: "description",
     message: "Describe your project.",
     validate: (descriptionInput) => {
-        if (descriptionInput) {
-            return true;
-        } else {
-            console.log("Description Required!");
-            return false;
-        }
-    }
-}
+      if (descriptionInput) {
+        return true;
+      } else {
+        console.log("Description Required!");
+        return false;
+      }
+    },
+  },
 
-//Need?
-{
+  //Need?
+  {
     type: "input",
     name: "need",
     message: "What need does your project meet or what problem does it solve?",
     validate: (needInput) => {
-        if (needInput) {
-            return true;
-        } else {
-            console.log("Need for project required!");
-            return false;
-        }
-    }
-}
+      if (needInput) {
+        return true;
+      } else {
+        console.log("Need for project required!");
+        return false;
+      }
+    },
+  },
 
-//Installation
-{
+  //Installation
+  {
     type: "input",
     name: "install",
     message: "How do you install your project?",
     validate: (installInput) => {
-        if (installInput) {
-            return true;
-        } else {
-            console.log("Installation instructions required!");
-            return false;
-        }
-    }
-}
+      if (installInput) {
+        return true;
+      } else {
+        console.log("Installation instructions required!");
+        return false;
+      }
+    },
+  },
 
-//Usage
-{
+  //Usage
+  {
     type: "input",
     name: "usage",
     message: "Please include instructions for usage",
     validate: (usageInput) => {
-        if (usageInput) {
-            return true;
-        } else {
-            console.log("Please include instructions for usage.");
-            return false;
-        }
-    }
-}
+      if (usageInput) {
+        return true;
+      } else {
+        console.log("Please include instructions for usage.");
+        return false;
+      }
+    },
+  },
 
-//Authors
-{
+  //Authors
+  {
     type: "input",
     name: "authors",
     message: "Who authored this project?",
     validate: (authorsInput) => {
-        if (authorsInput) {
-            return true;
-        } else {
-            console.log("Please include authors.");
-            return false;
-        }
-    }
-}
+      if (authorsInput) {
+        return true;
+      } else {
+        console.log("Please include authors.");
+        return false;
+      }
+    },
+  },
 
-//License
-{
+  //License
+  {
     type: "checkbox",
     name: "licensure",
     message: "Which licenses do you have for this project?",
-    choices: ["Academic", "Apache", "Artistic", "Boost", "BSD", "Creative Commons", "Do What the F*ck You Want To", "Educational Community", "Eclipse", "EU", "GNU", "ISC", "LaTeX", "Microsoft", "MIT" ,"Mozilla", "Open Software", "PostgreSQL", "SIL", "University of Illinois", "Unlicense", "zLib License", "None"],
+    choices: [
+      "Academic",
+      "Apache",
+      "Artistic",
+      "Boost",
+      "BSD",
+      "Creative Commons",
+      "Do What the F*ck You Want To",
+      "Educational Community",
+      "Eclipse",
+      "EU",
+      "GNU",
+      "ISC",
+      "LaTeX",
+      "Microsoft",
+      "MIT",
+      "Mozilla",
+      "Open Software",
+      "PostgreSQL",
+      "SIL",
+      "University of Illinois",
+      "Unlicense",
+      "zLib License",
+      "None",
+    ],
     validate: (licensureCheckbox) => {
-        if (licensureCheckbox) {
-            return true;
-        } else {
-            console.log("Please check one.");
-            return false;
-        }
-    }
-}
+      if (licensureCheckbox) {
+        return true;
+      } else {
+        console.log("Please check one.");
+        return false;
+      }
+    },
+  },
 
-//Features
-{
+  //Features
+  {
     type: "input",
     name: "features",
     message: "List your project features here.",
     validate: (featuresInput) => {
-        if (featuresInput) {
-            return true;
-        } else {
-            console.log("Please list features.");
-            return false;
-        }
-    }
-}
+      if (featuresInput) {
+        return true;
+      } else {
+        console.log("Please list features.");
+        return false;
+      }
+    },
+  },
 
-//How to Contribute
-{
+  //How to Contribute
+  {
     type: "input",
     name: "contribute",
     message: "How can people contribute?",
     validate: (contributeInput) => {
-        if (contributeInput) {
-            return true;
-        } else {
-            console.log("Please include how others can contribute.");
-            return false;
-        }
-    }
-}
+      if (contributeInput) {
+        return true;
+      } else {
+        console.log("Please include how others can contribute.");
+        return false;
+      }
+    },
+  },
 
-//Tests
-{
+  //Tests
+  {
     type: "input",
     name: "tests",
     message: "How can others test your project?",
     validate: (testInput) => {
-        if (testInput) {
-            return true;
-        } else {
-            console.log("Please give instructions on how to test your project.");
-            return false;
-        }
-    }
-}
+      if (testInput) {
+        return true;
+      } else {
+        console.log("Please give instructions on how to test your project.");
+        return false;
+      }
+    },
+  },
 
-//Questions?
-{
+  //Questions?
+  {
     type: "input",
     name: "email",
     message: "What is your email?",
     validate: (testEmail) => {
-        if (testEmail) {
-            return true;
-        } else {
-            console.log("Please enter your email address.");
-            return false;
-        }
-    }
-}
+      if (testEmail) {
+        return true;
+      } else {
+        console.log("Please enter your email address.");
+        return false;
+      }
+    },
+  },
 
-//GitHub Username
-{
+  //GitHub Username
+  {
     type: "input",
     name: "github",
     message: "What is your GitHub username?",
     validate: (testGithub) => {
-        if (testGithub) {
-            return true;
-        } else {
-            console.log("Pleas eenter your GitHub username.");
-            return false;
-        }
-    }
-}
+      if (testGithub) {
+        return true;
+      } else {
+        console.log("Pleas eenter your GitHub username.");
+        return false;
+      }
+    },
+  },
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, error => {
-        if (error)
-        console.log(error);
-    });
+  fs.writeFile(fileName, data, (error) => {
+    if (error) console.log(error);
+  });
 }
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer;
+  inquirer
     .prompt(questions)
-    .then(answers => {
-        const README = generateMarkdown(answers);
+    .then((answers) => {
+      const README = generateMarkdown(answers);
 
-        writeToFile("./dist/README.md", README)
+      writeToFile("./dist/README.md", README);
     })
-    .catch(error => {
-        console.log(error);
+    .catch((error) => {
+      console.log(error);
     });
 }
 
