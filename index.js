@@ -3,7 +3,7 @@ var fs = require("fs");
 // var staticSite = require("static-site");
 var inquirer = require("inquirer");
 const { setFlagsFromString } = require("v8");
-const generateMarkdown = require(".generateMarkdown");
+const generateMarkdown = require("./generateMarkdown");
 
 ///// QUESTIONS/////
 
@@ -52,20 +52,6 @@ const questions = [
         }
     }
 }
-
-//TOC yes or no
-//{
-//    type: "checkbox",
-//    name: "toc",
-//    message: "Do you want a table of contents?",
-//    validate: (tocCheckbox) => {
-//        if (tocCheckbox) {
-//            return true;
-//        } else {
-//            
-//        }
-//    }
-//}
 
 //Installation
 {
@@ -188,6 +174,7 @@ const questions = [
     }
 }
 
+//GitHub Username
 {
     type: "input",
     name: "github",
@@ -204,10 +191,26 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, error => {
+        if (error)
+        console.log(error);
+    });
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer;
+    .prompt(questions)
+    .then(answers => {
+        const README = generateMarkdown(answers);
+
+        writeToFile("./dist/README.md", README)
+    })
+    .catch(error => {
+        console.log(error);
+    });
+}
 
 // Function call to initialize app
 init();
