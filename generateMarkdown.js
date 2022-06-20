@@ -6,7 +6,7 @@ function renderLicenseBadge(license) {
   } else if (!license) {
     return "";
   } else {
-    return "![LICENSE IMAGE HERE]";
+    return "![License Badge](https://img.shields.io/badge/License-${license}-blueviolet)";
   }
 }
 
@@ -41,6 +41,19 @@ function generateMarkdown(data) {
 
   <br />
 
+  ##Table of Contents
+    - [Description](#description)
+    - [Purpose](#purpose)
+    - [Installation](#installation)
+    - [Usage](#usage)
+    - [Authors](#authors)
+    - [Licensure](#licensure)
+    - [Features](#features)
+    - [How to Contribute](#contribute)
+    - [Testing](#testing)
+    - [Questions](#questions)
+
+  <br />
   ##Description <br />
   ${data.description}<br />
 
@@ -85,6 +98,9 @@ ${data.contribute}<br />
 ${data.tests}<br />
 
 <br />
+
+##Questions <br />
+${data.questions}<br />
 
 `;
 }
