@@ -41,65 +41,66 @@ function generateMarkdown(data) {
   
   <br />
 
-  ##Table of Contents
-    - [Description](#description)
-    - [Purpose](#purpose)
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [Authors](#authors)
-    - [Licensure](#licensure)
-    - [Features](#features)
-    - [How to Contribute](#contribute)
-    - [Testing](#testing)
-    - [Questions](#questions)
+  ## Table of Contents <br />
+  - [Description](#description)<br />
+  - [Purpose](#purpose)<br />
+  - [Installation](#installation)<br />
+  - [Usage](#usage)<br />
+  - [Authors](#authors)<br />
+  - [Licensure](#licensure)<br />
+  - [Features](#features)<br />
+  - [How to Contribute](#contribute)<br />
+  - [Testing](#testing)<br />
+  - [Questions](#questions)<br />
+
+<br />
+
+## Description
+${data.description}<br />
 
   <br />
-  ##Description <br />
-  ${data.description}<br />
 
-  <br />
-
-##Purpose >br />
+## Purpose
 ${data.need}<br />
 
 <br />
 
-##Installation <br />
+## Installation
 ${data.install}<br />
 
 <br />
 
-##Usage <br />
+## Usage
 ${data.usage}<br />
 
 <br />
 
-##Authors <br />
+## Authors
 ${data.authors}<br />
 
 <br />
 
-##Licensure <br />
+## Licensure
 ${data.licensure}<br />
 
 <br />
 
-##Features <br />
+## Features
 ${data.features}<br />
 
 <br />
 
-##How to Contribute <br />
+## How to Contribute
 ${data.contribute}<br />
 
 <br />
 
-##Testing <br />
+## Testing
 ${data.tests}<br />
 
 <br />
 
-##Questions <br />
+## Questions
 ${data.questions}<br />
 
 `;
