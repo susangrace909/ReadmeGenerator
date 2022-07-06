@@ -27,4 +27,4 @@
 
 ## Video of Usage:
 
-![Video](location)
+![Video](NoteTakerVideo.webm)

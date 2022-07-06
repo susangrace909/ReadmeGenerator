@@ -6,7 +6,8 @@ function renderLicenseBadge(license) {
   } else if (!license) {
     return "";
   } else {
-    return "![License Badge](https://img.shields.io/badge/License-${license}-blueviolet)";
+    //template literals
+    return `![License Badge](https://img.shields.io/badge/License-${license}-blueviolet)`;
   }
 }
 
@@ -101,7 +102,9 @@ ${data.tests}<br />
 <br />
 
 ## Questions
-${data.questions}<br />
+For questions, please contact me here: <br />
+${data.email}<br />
+${data.github}<br />
 
 `;
 }

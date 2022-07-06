@@ -207,7 +207,7 @@ const questions = [
       if (testGithub) {
         return true;
       } else {
-        console.log("Pleas eenter your GitHub username.");
+        console.log("Pleas enter your GitHub username.");
         return false;
       }
     },
@@ -227,7 +227,6 @@ function init() {
     .prompt(questions)
     .then((answers) => {
       const README = generateMarkdown(answers);
-
       writeToFile("./dist/README.md", README);
     })
     .catch((error) => {
