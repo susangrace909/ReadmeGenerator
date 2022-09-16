@@ -28,3 +28,7 @@
 ## Video of Usage:
 
 ![Video](NoteTakerVideo.webm)
+
+## Sample README Generated:
+
+- ![Sample](SampleREADME.md)
